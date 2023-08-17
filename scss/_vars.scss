@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+$inter: 'Inter', sans-serif;
+
+:root {
+    --black: #272727;
+    --blue: #2D3D8A;
+    --pink: #F66D65;
+    --gray: #939393;
+    --sea: #E4E7F6;
+    --white: #FFFFFF;
+}
+
+$black: var(--black);
+$blue: var(--blue);
+$pink: var(--pink);
+$gray: var(--gray);
+$sea: var(--sea);
+$white: var(--white);
+
+.container {
+    max-width: 1660px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 15px;
+} 
+
+.main-btn {
+    
+}
