@@ -19,8 +19,8 @@
               </div>
             </div>
             <div class="header__col">
-              <div class="header__contacts">
-                <a href="mailto:olimp-aqua@mail.ru">
+              <div class="header__contacts mobile-col">
+                <a class="site-mail" href="mailto:olimp-aqua@mail.ru">
                   <svg
                     width="28"
                     height="22"
@@ -38,7 +38,7 @@
                   </svg>
                   <span>olimp-aqua@mail.ru</span>
                 </a>
-                <a href="tel:89055799233">
+                <a href="tel:89055799233" class="mobile-phone">
                   <svg
                     width="27"
                     height="27"
@@ -56,7 +56,25 @@
                   </svg>
                   <span>+7 (905) 579-92-33</span>
                 </a>
-                <a href="tel:84997556687">
+                <a data-da=".mobile-contacts, 1440, 1" href="tel:89055799233">
+                  <svg
+                    width="27"
+                    height="27"
+                    viewBox="0 0 27 27"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.5625 13.6C9.59153 15.7251 11.3098 17.439 13.4375 18.4625C13.5944 18.5369 13.768 18.569 13.9412 18.5559C14.1143 18.5427 14.2811 18.4847 14.425 18.3875L17.55 16.3C17.6881 16.2064 17.8476 16.1493 18.0137 16.134C18.1799 16.1187 18.3472 16.1457 18.5 16.2125L24.35 18.725C24.5499 18.8083 24.717 18.9549 24.8254 19.1424C24.9338 19.3298 24.9776 19.5477 24.95 19.7625C24.7646 21.2097 24.0582 22.5397 22.9631 23.5038C21.8679 24.4678 20.459 24.9997 19 25C14.4913 25 10.1673 23.209 6.97919 20.0209C3.79107 16.8327 2 12.5087 2 8.00004C2.00033 6.54104 2.53227 5.13214 3.49628 4.03699C4.4603 2.94183 5.79033 2.23546 7.2375 2.05004C7.4523 2.02245 7.67021 2.06623 7.85768 2.17465C8.04515 2.28307 8.19178 2.4501 8.275 2.65004L10.7875 8.51254C10.8528 8.66297 10.8802 8.82717 10.8671 8.99066C10.854 9.15415 10.8009 9.31191 10.7125 9.45004L8.625 12.625C8.53206 12.7686 8.47752 12.9337 8.46657 13.1044C8.45563 13.2751 8.48866 13.4457 8.5625 13.6Z"
+                      stroke="#F66D65"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span>+7 (905) 579-92-33</span>
+                </a>
+                <a data-da=".mobile-contacts, 1440, 2" href="tel:84997556687">
                   <svg
                     width="32"
                     height="22"
@@ -76,8 +94,8 @@
                   <span>8 (499) 755-66-87</span>
                 </a>
               </div>
-              <div class="header__socials">
-                <a href="">
+              <div data-da=".mobile-socials, 1440, 1" class="header__socials">
+                <a href="#">
                   <svg
                     width="25"
                     height="25"
@@ -93,7 +111,7 @@
                     />
                   </svg>
                 </a>
-                <a href="">
+                <a href="#">
                   <svg
                     width="26"
                     height="22"
@@ -109,7 +127,7 @@
                     />
                   </svg>
                 </a>
-                <a href="">
+                <a href="#">
                   <svg
                     width="27"
                     height="21"
@@ -126,6 +144,14 @@
                   </svg>
                 </a>
               </div>
+            </div>
+          </div>
+          <div class="header__row tablet-row">
+            <div class="header__contacts mobile-contacts">
+
+            </div>
+            <div class="mobile-socials">
+
             </div>
           </div>
           <div class="header__row">
@@ -174,11 +200,53 @@
             <div class="header__action">
                 <button class="main-btn">Заказать звонок</button>
             </div>
+            <div class="header__btn">
+              <button class="burger-btn"><span></span></button>
+            </div>
           </div>
         </div>
       </header>
-      <main class="main"></main>
+      <main class="main">
+        <section class="welcome">
+          <div class="container">
+            <div class="welcome__text">
+              <h1>
+                Ремонт скважин
+              </h1>
+              <p>
+                Предлагаем качественный и надежный ремонт скважин: диагностика, замена оборудования, ремонт любой сложности.
+              </p>
+              <span>
+                Оставьте заявку прямо сейчас!
+              </span>
+              <div class="welcome__action">
+                <button class="main-btn">Оставить заявку</button>
+                <button class="main-btn trans-btn">Рассчитать стоимость</button>
+              </div>
+            </div>
+            <div class="welcome__items">
+              <article class="welcome__item">
+                <p>
+                  Гарантируем долгосрочное функционирование
+                </p>
+              </article>
+              <article class="welcome__item">
+                <p>
+                  Работаем в городах Подмосковья, соседних регионах
+                </p>
+              </article>
+              <article class="welcome__item">
+                <p>
+                  Выбирайте различные варианты оплаты 
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
       <footer class="footer"></footer>
     </div>
+    <script src="js/dynamic_adapt.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans:wght@600&display=swap');
 
+$open: 'Open Sans', sans-serif;
 $inter: 'Inter', sans-serif;
 
 :root {
@@ -23,8 +24,84 @@ $white: var(--white);
     margin: 0 auto;
     box-sizing: border-box;
     padding: 0 15px;
+    @media(max-width:620px) {
+        padding: 0 10px;
+    }
 } 
 
 .main-btn {
-    
+   box-sizing: border-box; 
+   padding: 9px 15px;
+   color: #fff;
+   background-color: $blue;
+   border-radius: 5px;
+   text-align: center;
+   border: none;
+   font-family: $inter;
+   font-size: 18px;
+   font-weight: 600;
+   line-height: normal;
+   cursor: pointer;
+   transition: .35s ease;
+   &:hover {
+    background-color: $pink;
+   }
+   &.trans-btn {
+    background-color: transparent;
+    border: 1px solid $pink;
+    color: $black;
+    &:hover {
+        background-color: $pink;
+        color: #fff;
+    }
+   }
+}
+
+body {
+    font-family: $inter;
+
+}
+
+.header__btn {
+    margin-left: 40px;
+    display: none;
+    @media(max-width:1440px) {
+        display: block;
+    }
+}
+
+.burger-btn { 
+    box-sizing: border-box;
+    width: 35px;
+    height: 25px;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $black;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $black;
+    }
+    span {
+        position: absolute;
+        left: 0;
+        top: calc(50% - 1px);
+        width: 100%;
+        height: 2px;
+        background-color: $black;
+    }
 }
