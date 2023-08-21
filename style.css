@@ -1128,6 +1128,18 @@ body {
   margin-top: 60px;
 }
 
+.edge::before {
+  content: '';
+  position: absolute;
+  left: -10%;
+  background-size: 100%;
+  top: 20px;
+  width: 50%;
+  background-image: url(assets/imgs/edge-img.png);
+  height: 120%;
+  background-repeat: no-repeat;
+}
+
 .edge__text {
   margin-left: auto;
   width: 50%;
@@ -1217,8 +1229,8 @@ body {
 .edge__item {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 0 10px 35px 10px;
-  padding: 30px 20px;
+  margin: 0 10px 20px 10px;
+  padding: 30px 20px 45px;
   position: relative;
   width: calc(50% - 20px);
   background-color: #e4e7f6;
@@ -1268,4 +1280,99 @@ body {
   font-size: 20px;
   color: var(--black);
   display: block;
+}
+
+@media (max-width: 1024px) {
+  .edge {
+    padding-bottom: 330px;
+  }
+  .edge__text {
+    max-width: none;
+    width: 100%;
+  }
+  .edge__text h2 {
+    text-align: center;
+    display: block;
+    font-size: 40px;
+  }
+  .edge::before {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: 25px;
+    background-size: 100% 100%;
+    width: 300px;
+    height: 300px;
+    top: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .edge {
+    padding-bottom: calc(100vw - 35px);
+  }
+  .edge::before {
+    left: calc(50%);
+    height: calc(100vw - 20px);
+    width: calc(100vw - 20px);
+    bottom: -50px;
+  }
+}
+
+@media (max-width: 660px) {
+  .edge {
+    padding-top: 25px;
+    margin-top: 0;
+  }
+  .edge__text h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  .edge__text ul li {
+    padding-left: 25px;
+    padding-bottom: 15px;
+  }
+  .edge__text ul li p {
+    font-size: 14px;
+  }
+  .edge__text ul li::before {
+    top: -2px;
+    width: 13px;
+    height: 13px;
+    background-size: cover;
+  }
+  .edge__text ul li::after {
+    left: 6px;
+  }
+  .edge__items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+  }
+  .edge__item {
+    max-width: none;
+    margin: 0;
+    width: 100%;
+    margin-bottom: 15px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .edge__item:last-child {
+    margin-bottom: 0;
+  }
+  .edge__item .img {
+    width: 70px;
+    height: 70px;
+  }
+  .edge__item .text h3 {
+    font-size: 14px;
+    margin-bottom: 9px;
+  }
+  .edge__item .text p {
+    font-size: 12px;
+  }
 }

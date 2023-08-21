@@ -5,6 +5,17 @@
     background-color: $blue;
     color: #fff;
     margin-top: 60px;
+    &::before {
+        content: '';
+        position: absolute;
+        left: -10%;
+        background-size: 100%;
+        top: 20px;
+        width: 50%;
+        background-image: url(assets/imgs/edge-img.png);
+        height: 120%;
+        background-repeat: no-repeat;
+    }
     // .edge__text
     .container {
 
@@ -92,7 +103,7 @@
 
     &__item {
         box-sizing: border-box;
-        margin: 0 10px 35px 10px;
+        margin: 0 10px 20px 10px;
         &::before {
             content: '';
             position: absolute;
@@ -102,7 +113,7 @@
             height: 15px;
             background-color: $pink;
         }
-        padding: 30px 20px;
+        padding: 30px 20px 45px;
         position: relative;
         width: calc(50% - 20px);
         background-color: #e4e7f6;
@@ -137,9 +148,101 @@
         }
     }
 }
-.container {
+
+@media(max-width:1024px) {
+    .edge{
+       
+         &__text {
+            h2 {
+                text-align: center;
+                display: block;
+                font-size: 40px;
+            }
+            max-width: none;
+            width: 100%;
+         }
+         padding-bottom: 330px;
+         &::before {
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 25px;
+            background-size: 100% 100%;
+            width: 300px;
+            height: 300px;
+            top: auto;
+         }
+    }
 }
-.img {
+
+
+@media(max-width:768px) {
+    .edge {
+        padding-bottom: calc(100vw - 35px);
+        &::before {
+            left: calc(50%);
+            height: calc(100vw - 20px);
+            width: calc(100vw - 20px);
+            bottom: -50px;
+        }
+    }
 }
-.text {
+
+@media(max-width:660px) {
+    .edge{
+        padding-top: 25px;
+        margin-top: 0;
+        &__text {
+            h2 {
+                font-size: 28px;
+                margin-bottom: 15px;
+            }
+            ul {
+                li {
+                    padding-left: 25px;
+                    padding-bottom: 15px;
+                    p {
+                        font-size: 14px;
+                        
+                    }
+                    &::before {
+                        top: -2px;
+                        width: 13px;
+                        height: 13px;
+                        background-size: cover;
+                    }
+                    &::after {
+                        left: 6px;
+
+                    }
+                }
+            }
+        }
+        &__items {
+            flex-direction: column;
+            margin: 0;
+        }
+        &__item {
+            max-width: none;
+            margin: 0;
+            width: 100%;
+            margin-bottom: 15px;
+            align-items: flex-start;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .img {
+                width: 70px;
+                height: 70px;
+            }
+            .text {
+                h3 {
+                    font-size: 14px;
+                    margin-bottom: 9px;
+                }
+                p {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
 }
