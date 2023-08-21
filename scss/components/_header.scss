@@ -1,16 +1,24 @@
 .header {
     padding: 15px 0;
     box-sizing: border-box;
-    position: fixed;
     background-color: transparent;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100;
-    transition: .35s ease;
-    
+    transition: .15s ease;
+    position: fixed;
     // .header__row
-
+    &.active {
+        background-color: #fff;
+        box-shadow: 0 0 10px  #5b5c5c74;
+        .header__row:nth-child(1), .header__row:nth-child(2) {
+            max-height: 0;
+            transition: .35s ease;
+            overflow: hidden;
+            margin: 0;
+        }
+    }
     .mobile-phone {
         display: none;
     }
@@ -233,9 +241,21 @@
 
 @media(max-width:1440px) {
     .header {
+        position: fixed;
         &.active {
+            
             background-color: #fff;
             padding: 10px 0;
+           
+            .header__title {
+                .img {
+                    margin-bottom: 0;
+                }
+                p {
+                    max-height: 0;
+                    overflow: hidden;
+                }
+            }
         }
         .site-mail {
             margin-right: 0;
