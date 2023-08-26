@@ -66,7 +66,10 @@
         display: flex;
         align-items: stretch;
         margin-top: 20px;
-        button {
+        a {
+            padding: 15px 30px;
+            box-sizing: border-box;
+            font-size: 24px;
             &:first-child {
                 margin-right: 20px;
             }
@@ -237,7 +240,9 @@ box-shadow: 4px 0px 11px 0px rgba(0, 0, 0, 0.10), -4px 0px 4px 0px rgba(0, 0, 0,
        &__action {
             max-width: none;
             flex-direction: column;
-            button {
+            a {
+                font-size: 20px;
+                padding: 7px 10px;
                 &:first-child {
                     margin-right: 0;
                     margin-bottom: 10px;

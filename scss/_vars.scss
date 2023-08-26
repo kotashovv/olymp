@@ -28,34 +28,43 @@ $white: var(--white);
         padding: 0 10px;
     }
 } 
-
 .main-btn {
-   box-sizing: border-box; 
-   padding: 9px 15px;
-   color: #fff;
-   background-color: $blue;
-   border-radius: 5px;
-   text-align: center;
-   border: none;
-   font-family: $inter;
-   font-size: 18px;
-   font-weight: 600;
-   line-height: normal;
-   cursor: pointer;
-   transition: .35s ease;
-   &:hover {
-    background-color: $pink;
-   }
-   &.trans-btn {
-    background-color: transparent;
-    border: 1px solid $pink;
-    color: $black;
+    box-sizing: border-box; 
+    padding: 9px 15px;
+    color: #fff;
+    background-color: $blue;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    font-family: $inter;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+    transition: .35s ease;
+    display: block;
+    text-decoration: none;
     &:hover {
-        background-color: $pink;
-        color: #fff;
+     background-color: $pink;
     }
-   }
-}
+    &.trans-btn {
+     background-color: transparent;
+     border: 1px solid $pink;
+     color: $black;
+     &:hover {
+         background-color: $pink;
+         color: #fff;
+     }
+    }
+    &.pink-btn {
+     background-color: $pink;
+     color: #fff;
+     &:hover {
+         color: #000;
+         background-color: #fff;
+     }
+    }
+ }
 
 body {
     font-family: $inter;

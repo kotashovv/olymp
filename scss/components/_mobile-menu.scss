@@ -1,0 +1,254 @@
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    overflow: hidden;
+    transition: .15s ease;
+    &::before {
+        cursor: pointer;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $blue;
+        opacity: .7;
+    }
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        .mobile-menu__bar {
+            right: 0;
+            opacity: 1;
+        }
+    }
+    // .mobile-menu__bar
+
+    &__bar {
+
+        .close-btn {
+            position: absolute;
+            top: 100px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                height: 2px;
+                width: 100%;
+                background-color: #fff;
+                transform: rotate(45deg);
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                height: 2px;
+                width: 100%;
+                background-color: #fff;
+                transform: rotate(-45deg);
+            }
+            right: 15px;
+            width: 30px;
+            height: 30px;
+        }
+        position: absolute;
+        right: 0;
+        top: 0;
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        max-width: 445px;
+        background-color: $blue;
+        padding: 100px 40px 40px 60px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        right: -100%;
+        opacity: 0;
+        transition: .5s ease;
+    }
+    .title {
+        margin-bottom: 50px;
+        img {
+            display: block;
+            max-width: 260px;
+            width: 100%;
+            margin-bottom: 8px;
+        }
+        span {
+            display: block;
+            font-family: $inter;
+            font-size: 14px;
+            font-weight: 400;
+            color: #fff;
+            max-width: 240px;
+            line-height: .95;
+        }
+    }
+    .nav {
+        margin-bottom: auto;
+        ul {
+            list-style: none;
+            margin: 0 -5px;
+            display: block;
+            padding: 0;
+            li {
+                margin: 0;
+                padding: 0;
+                a {
+                    display: block;
+                    width: fit-content;
+                    padding: 10px 5px;
+                    font-family: $open;
+                    font-size: 24px;
+                    font-weight: 700;
+                    color: #fff;
+                    transition: .35s ease;
+                    text-decoration: none;
+                    &:hover {
+                        color: $pink;
+                    }
+                }
+            }
+        }
+    }
+    .social {
+        .social__list {
+            margin-top: 15px;
+            ul {
+                padding: 0;
+            margin: 0;
+            list-style: none;
+             li {
+                margin-bottom: 15px;
+                &:nth-child(1) {
+                    a::before {
+                        background-image: url(assets/imgs/mail.svg);
+                    }
+                }
+                &:nth-child(2) {
+                    a::before {
+                        background-image: url(assets/imgs/mobile.svg);
+                    }
+                }
+                &:nth-child(3) {
+                    a::before {
+                        background-image: url(assets/imgs/phone.svg);
+                    }
+                }
+                a {
+                    font-size: 16px;
+                    display: block;
+                    box-sizing: border-box;
+                    position: relative;
+                    padding-left: 34px;
+                    color: #fff;
+                    text-decoration: none;
+                    
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 24px;
+                        height: 18px;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                }
+             }
+            }
+        }
+        .items {
+            display: flex;
+            align-items: center;
+            a {
+                width: 24px;
+                height: 24px;
+                margin-right: 12px;
+                text-decoration: none;
+                img {
+                    width: 100%;
+                    display: block;
+
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width:560px) {
+    .mobile-menu {
+        &__bar {
+            max-width: none;
+            width: 100%;
+            padding: 90px 15px 40px;
+            .nav{ 
+                ul {
+                    margin: 0;
+                    li {
+                        a {
+                          padding: 3px 0;  
+                          font-size: 16px;
+                          font-weight: 700;
+                        }
+                    }
+                }
+            }
+            .social {
+                .items {
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+                .social__list {
+                    ul {
+                        li {
+                            margin-bottom: 10px;
+                            a {
+                                padding-left: 22px;
+                                &::before {
+                                    width: 19px;
+                                    height: 14px;
+
+                                }
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+            .title {
+                max-width: 220px;
+                margin-bottom: 15px;
+                img{
+                    max-width: 200px;
+                }
+                span {
+                    max-width: 205px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
