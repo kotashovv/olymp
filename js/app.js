@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         onChange: function (data) {
             // Called every time handle position is changed
             if (totalCalc){ 
-                totalCalc.innerHTML = data.from * 320 + '';
+                totalCalc.innerHTML = (data.from * 320).toLocaleString('ru-RU') + ' ₽';
             }
             
         },
@@ -177,6 +177,11 @@ document.addEventListener('DOMContentLoaded', () => {
         function OpenMenu() {
             const mobileWindow = document.querySelector('.mobile-menu');
             mobileWindow.classList.add("active");
+            document.addEventListener('click', (e)=>{
+                if (e.target.classList.contains('mobile-menu') && !e.target.classList.contains('burger-btn')) {
+                    CloseMenu();
+                }
+            })
         }
         function CloseMenu() {
             const mobileWindow = document.querySelector('.mobile-menu');

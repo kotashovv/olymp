@@ -3363,7 +3363,7 @@ body {
 }
 
 .mobile-menu::before {
-  cursor: pointer;
+  pointer-events: none;
   content: '';
   position: absolute;
   left: 0;
@@ -3386,6 +3386,8 @@ body {
 }
 
 .mobile-menu__bar {
+  min-height: 800px;
+  overflow: auto;
   position: absolute;
   right: 0;
   top: 0;
@@ -3580,6 +3582,8 @@ body {
 
 @media (max-width: 560px) {
   .mobile-menu__bar {
+    min-height: 0;
+    overflow: auto;
     max-width: none;
     width: 100%;
     padding: 90px 15px 40px;

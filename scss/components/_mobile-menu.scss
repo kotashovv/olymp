@@ -11,7 +11,7 @@
     overflow: hidden;
     transition: .15s ease;
     &::before {
-        cursor: pointer;
+        pointer-events: none;
         content: '';
         position: absolute;
         left: 0;
@@ -33,7 +33,8 @@
     // .mobile-menu__bar
 
     &__bar {
-
+        min-height: 800px;
+        overflow: auto;
         .close-btn {
             position: absolute;
             top: 100px;
@@ -196,6 +197,8 @@
 @media(max-width:560px) {
     .mobile-menu {
         &__bar {
+            min-height: 0;
+            overflow: auto;
             max-width: none;
             width: 100%;
             padding: 90px 15px 40px;
