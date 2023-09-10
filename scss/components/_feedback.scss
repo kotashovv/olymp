@@ -5,6 +5,34 @@
     // .feedback__title 
     background-color: $sea;
 
+   &__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+        border: none;
+        background-color: transparent;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        box-sizing: border-box;
+        margin: 0 15px;
+        border: 2px solid #fff;
+        cursor: pointer;
+        border-radius: 3px;
+        svg {
+            max-width: 100%;
+            display: block;
+        }
+        &.feedback-prev {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+   }
     &__title {
         margin-bottom: 40px;
         h2 {

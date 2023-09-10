@@ -2561,6 +2561,49 @@ body {
   background-color: var(--sea);
 }
 
+.feedback__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.feedback__navigation button {
+  border: none;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 15px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.feedback__navigation button svg {
+  max-width: 100%;
+  display: block;
+}
+
+.feedback__navigation button.feedback-prev svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .feedback__title {
   margin-bottom: 40px;
 }
@@ -3630,5 +3673,69 @@ body {
   .mobile-menu__bar .title span {
     max-width: 205px;
     font-size: 12px;
+  }
+}
+
+.slider-nav {
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.slider-prev, .slider-next {
+  z-index: 100;
+  pointer-events: all;
+  border: none;
+  padding: 3px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 33px;
+  height: 33px;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.slider-prev svg, .slider-next svg {
+  display: block;
+  max-width: 100%;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.slider-next svg {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+
+@media (max-width: 560px) {
+  .slider-nav {
+    top: 120px;
+  }
+}
+
+@media (max-width: 350px) {
+  .slider-nav {
+    top: 100px;
   }
 }
